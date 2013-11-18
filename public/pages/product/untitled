@@ -1,0 +1,22 @@
+
+	
+
+You need to chmod the file 1st before run.
+
+chmod +x file.sh
+
+Now your can run your .sh file as follows
+
+./file.sh
+
+Another way to run .sh file in Linux
+
+sh file.sh
+
+OR
+
+bash file.sh
+
+First you might need to give the .sh file permission to execute. chmod +x file.sh, then you can execute it with ./file.sh.
+
+You can also right-click on the file, select Properties, then select Permissions and then select 'Allow executing file as program'. Then you double-click the file and select 'Run in Terminal' or 'Run'.

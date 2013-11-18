@@ -1,0 +1,14 @@
+<?php 
+
+include '../../../private/conexion.php';
+$pdo = DataBase::connect();
+if (isset($_POST['q'])){
+    $productName = $_POST['q'];
+    $gsent = $pdo->prepare("select name, precio_total, hts_id from aduanet_product where name like '%".$productName."%' limit 0, 1000");
+    $gsent->execute();
+    $resultado = $gsent->fetchAll();
+    echo json_encode($resultado);
+}else{
+    $json = '{"nombre": daniel, "apellido": padilla}';
+    echo json_decode($json);
+}
